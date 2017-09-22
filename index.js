@@ -9,8 +9,9 @@ app.get('/', function(req, res){
 //Whenever someone connects this gets executed
 io.on('connection', function(socket){
   console.log('A user connected');
+  console.log(socket.id);
 
-  //Whenever someone disconnects this piece of code executed
+  //Whenever someone disconnects this piece of code executedsocket 
   socket.on('disconnect', function () {
     console.log('A user disconnected');
   });
